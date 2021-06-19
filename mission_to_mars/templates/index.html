@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mars!!!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+</head>
+
+<body>
+    <div class='container-fluid'>
+        <div class="jumbotron text-center">
+            <h1><strong>Mission to Mars!</strong></h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">scrape for data</a></p>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 text-left">
+            <h2>Latest mars news : </h2>
+            <p><strong>{{mars_attacks.news_title}}</strong></p>
+        
+            <p>{{mars_attacks.news_body}}</p>
+    </div>
+    <div class="row"></div>
+        <div class="col-sm-6 text-center">
+            <h2>Featured Image! </h2>
+            <img src="{{mars_attacks.feat_image}}" alt="Featured image from Mars" width="400" height="350">
+
+        </div>
+    
+        <div class="col-sm-3">
+            <h3>Mars facts</h3>
+            {{mars_attacks.mars_table|safe}}
+        </div>
+    </div><br>
+
+          
+    
+    <div class="container-fluid bg-3 text-center"></div>
+        <div class="row">
+            {% for x in mars_attacks.hemisphere_urls %}
+
+            <div class="col-sm-3">
+                <p>{{x.title}}</p>
+                <img src="{{x.img_url}}" alt="hemisphere of mars" width="400" height="350">
+            </div>
+            {% endfor %}
+
+    </div>
+
+    
+    
+</body>

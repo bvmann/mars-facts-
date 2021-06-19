@@ -178,6 +178,9 @@ def scrape():
     
 
     return mars_data
+#---test function
+#date = scrape()
+#print(date)
 
 
 
