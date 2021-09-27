@@ -1,4 +1,4 @@
-# web-scraping-challenge
+# Mars Scraper
 
 For this project I scraped multiple web pages and passed the found data into mongo than created a html website with this data using flask. 
 
